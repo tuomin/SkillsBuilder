@@ -24,48 +24,33 @@ input 1: "Target job" - what is the job that the user is currently holding or ta
 input 2: Industry (optional) - if the user wants to narrow the search and target for a specific industry (eg. pharmaceutical or technology)?
 input 3: Country (optional) - if the user wants to narrow the search and target for a specific country (eg. Finland or UK or maybe Europe)?
 
-** Step 2 - ML will come up with top 20 skills categorised using simplified, custom version of public skills inventories. The skills library continues to the live  in production phase but the output are continuously monitored for quality and consistency. User can select between selected prioritisation criteria (e.g. "Fortune 500", "Start-ups" etc.)
+** Step 2 - ML will search the live skills Skills Builder inventory and will come up with top 20 skills categorised using simplified, custom version of public skills inventories. The skills library continues to the live  in production phase but the output are continuously monitored for quality and consistency. User can select between selected prioritisation criteria (e.g. "Fortune 500", "Start-ups" etc.)
 
 ** Step 3 - From the long,  prioritised list of skills, the user will select the skills she wants to develop this time. Optionally, user can also give the time they have for learning so that the output is realistic within the given timeframe. 
 
-** Step 4 - Generative AI will produce and draft action plan based on the selected skills. The user can iterate the plan using predefined toggles. 
+** Step 4 - Generative AI will be used produce and draft action plan based on the selected skills. The user can iterate the plan using predefined toggles. 
 
+## Data sources and AI methods 
+Where does your data come from? 
+* LinkedIn and other Job Postings (via web scraping or APIs like SerpApi, terms to be investigated)
+* European Skills, Competences, Qualifications and Occupations (ESCO)
+* O*NET database (US Department of Labor)
+* Possibly Kaggle Datasets (based on licencing and validity of data)
+  https://www.kaggle.com/datasets/niyamatalmass/google-job-skills
+  https://www.kaggle.com/datasets/atahmasb/amazon-job-skills
+  https://www.kaggle.com/datasets/asaniczka/1-3m-linkedin-jobs-and-skills-2024 
 
-```
-def main():
-   countries = ['Denmark', 'Finland', 'Iceland', 'Norway', 'Sweden']
-   pop = [5615000, 5439000, 324000, 5080000, 9609000]   # not actually needed in this exercise...
-   fishers = [1891, 2652, 3800, 11611, 1757]
-
-   totPop = sum(pop)
-   totFish = sum(fishers)
-
-   # write your solution here
-
-   for i in range(len(countries)):
-      print("%s %.2f%%" % (countries[i], 100.0))    # current just prints 100%
-
-main()
-```
-
-
-## Data sources and AI methods
-Where does your data come from? Do you collect it yourself or do you use data collected by someone else?
-If you need to use links, here's an example:
-[Twitter API](https://developer.twitter.com/en/docs)
-
-| Syntax      | Description |
-| ----------- | ----------- |
-| Header      | Title       |
-| Paragraph   | Text        |
 
 ## Challenges
 
-What does your project _not_ solve? Which limitations and ethical considerations should be taken into account when deploying a solution like this?
+Data privacy might be an issue if people enter information about jobs that they want to transition to. If the SkillBuilder is used internally in a company, the user entries may need to be encrypted so that future desires are kept secret (if the user wants to do that). It does not yet solve these problems, but of course could be iterated to address:
+* Capabilities and Goals - How to align invididual development to company goals and strategic needs
+* Follow-up - How to ensure that the learning and skills development actually happens? What is the role of the Manager as a coach for development?
+Which limitations and ethical considerations should be taken into account when deploying a solution like this?
 
 ## What next?
 
-How could your project grow and become something even more? What kind of skills, what kind of assistance would you  need to move on? 
+I would need developers who are competent in scraping and cleaning/manipulating data. I would also need to study the licencing models and how the SkillBuilder could be integrated into company HRIS and other software (including Data lakes and warehouses). I would need to data governance topics and continuous maintenance for production. I would need to understand the technical architecture and computational requirements for cost analysis. What would be the human-in-the-loop solution for something like this?
 
 
 ## Acknowledgments
