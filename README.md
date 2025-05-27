@@ -35,8 +35,7 @@ Where does your data come from?
 * LinkedIn and other Job Postings (via web scraping or APIs like SerpApi, terms to be investigated)
 * European Skills, Competences, Qualifications and Occupations (ESCO)
 * O*NET database (US Department of Labor)
-* Possibly Kaggle Datasets (based on licencing and validity of data)
-  https://www.kaggle.com/datasets/niyamatalmass/google-job-skills
+* Possibly Kaggle Datasets (based on licencing and validity of data), examples
   https://www.kaggle.com/datasets/atahmasb/amazon-job-skills
   https://www.kaggle.com/datasets/asaniczka/1-3m-linkedin-jobs-and-skills-2024 
 
@@ -46,11 +45,11 @@ Where does your data come from?
 Data privacy might be an issue if people enter information about jobs that they want to transition to. If the SkillBuilder is used internally in a company, the user entries may need to be encrypted so that future desires are kept secret (if the user wants to do that). It does not yet solve these problems, but of course could be iterated to address:
 * Capabilities and Goals - How to align invididual development to company goals and strategic needs
 * Follow-up - How to ensure that the learning and skills development actually happens? What is the role of the Manager as a coach for development?
-Which limitations and ethical considerations should be taken into account when deploying a solution like this?
-
+Which limitations and ethical considerations should be taken into account when deploying a solution like this? Data privacy, who actually owns publicly available job ads on job boards and can they be scraped?
+  
 ## What next?
 
-I would need developers who are competent in scraping and cleaning/manipulating data. I would also need to study the licencing models and how the SkillBuilder could be integrated into company HRIS and other software (including Data lakes and warehouses). I would need to data governance topics and continuous maintenance for production. I would need to understand the technical architecture and computational requirements for cost analysis. What would be the human-in-the-loop solution for something like this?
+I would need developers who are competent in API interfaces and scraping, cleaning/manipulating data. I would also need to study the licencing models and how the SkillBuilder could be integrated into company HRIS and other software (including Data lakes and warehouses). I would need to data governance topics and continuous maintenance for production. I would need to understand the technical architecture and computational requirements for cost analysis. What would be the human-in-the-loop solution for something like this?
 
 
 ## Acknowledgments
